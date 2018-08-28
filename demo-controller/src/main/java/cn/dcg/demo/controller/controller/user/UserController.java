@@ -7,6 +7,7 @@ import cn.dcg.demo.domain.user.User;
 import cn.dcg.demo.service.user.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletResponse;
@@ -15,6 +16,7 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("user")
+@Transactional
 public class UserController extends BaseController {
     @Autowired
     private IUserService iUserService;

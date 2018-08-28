@@ -20,4 +20,6 @@ public class IUserServiceImpl implements IUserService {
     public int deleteUserById(Integer uid) {
         return userMapper.deleteUserByUserId(uid);
     }
+
+
 }

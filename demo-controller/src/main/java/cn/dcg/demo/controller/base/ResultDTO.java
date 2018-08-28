@@ -28,4 +28,16 @@ public class ResultDTO<T> {
         resultDTO.setResult(result);
         return resultDTO;
     }
+    public static <T> ResultDTO<T> resultDTOError(){
+        ResultDTO<T> resultDTO = new ResultDTO<T>();
+        resultDTO.setCode(SysCode.SYS_EXCEPTION_CODE);
+        resultDTO.setDescription(SysCode.SYS_EXCEPTION_MSG);
+        return resultDTO;
+    }
+    public static <T> ResultDTO<T> resultDTOError(String code, String description){
+        ResultDTO<T> resultDTO = new ResultDTO<T>();
+        resultDTO.setCode(code);
+        resultDTO.setDescription(description);
+        return resultDTO;
+    }
 }
